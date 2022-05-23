@@ -1,0 +1,29 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: mail
+  mail: # owyujmfuceqkdjid
+    protocol: smtp #邮件协议
+    host: smtp.qq.com
+    default-encoding: UTF-8
+    username: 2248511201@qq.com
+    password: owyujmfuceqkdjid
+    properties:
+      mail:
+        debug: true
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+  thymeleaf:
+    prefix: classpath:/template/
+    suffix: .html
+    servlet:
+      content-type: text/html
+
+eureka:
+  client:
+    service-url:  # eureka的地址信息
+      defaultZone: http://127.0.0.1:10086/eureka
